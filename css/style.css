@@ -1,0 +1,251 @@
+/* =========================
+   RESET GENERAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY GENERAL
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+header h1 {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 48px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: #9e9e9e;
+    padding: 12px 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* PSEUDOCLASE */
+header nav ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* =========================
+   MAIN GENERAL
+========================= */
+main {
+    min-height: 70vh;
+}
+
+main section {
+    padding: 20px;
+}
+
+main section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main section p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* =========================
+   FLEXBOX (PRODUCTOS / INDEX)
+========================= */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+article {
+    width: 230px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* PSEUDOCLASE */
+article:hover {
+    transform: scale(1.05);
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PRECIOS
+========================= */
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c75a00;
+}
+
+/* PSEUDOELEMENTO */
+.precio::before {
+    content: "$ ";
+}
+
+/* =========================
+   FORMULARIO CONTACTO
+========================= */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    resize: none;
+}
+
+/* =========================
+   FOOTER (GRID)
+========================= */
+footer {
+    background-color: rgba(200, 102, 41, 0.55);
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    text-align: center;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* PSEUDOCLASE */
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+/* =========================
+   MEDIA QUERIES (RESPONSIVE)
+========================= */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        margin: 10px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CONTENIDO DE LAS CARDS */
+.container article h3 {
+    min-height: 50px;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.container article p,
+.container article h4 {
+    margin-top: auto;       
+    font-weight: bold;
+    font-size: 16px;
+.container article:hover p,
+.container article:hover h4 
+    color: orange; }
+/* HOVER EN PRODUCTOS */
+.container article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.producto-card {
+    width: 18rem;
+}
+
+.producto-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* pseudoclase */
+.producto-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.precio {
+    color: #ff9800;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
